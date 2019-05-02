@@ -86,6 +86,8 @@ contactP[0].textContent = siteContent['contact']['address'];
 contactP[1].textContent = siteContent['contact']['phone'];
 contactP[2].textContent = siteContent['contact']['email'];
 
+let copy = document.querySelector('footer p');
+copy.textContent = siteContent['footer']['copyright'];
 
 //let h4 = document.querySelectorAll("h4");
 //const titles = Object.values(siteContent.nav);
