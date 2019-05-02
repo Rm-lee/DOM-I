@@ -40,3 +40,87 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+navCounter = 1;
+let navl = document.querySelectorAll('nav a');
+navl.forEach(element => {
+  
+   content = `nav-item-${navCounter}`;
+   element.textContent = siteContent["nav"][content];
+   element.style.color = 'green';
+   navCounter = navCounter + 1;
+});
+
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+
+let ctaBtn = document.querySelector('.cta-text button');
+ctaBtn.textContent = siteContent['cta']['button'];
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['cta']['img-src'];
+
+let h4 = document.querySelectorAll(".main-content h4");
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+
+let texts = document.querySelectorAll('p');
+texts[0].textContent = siteContent['main-content']['features-content'];
+texts[1].textContent = siteContent['main-content']['about-content'];
+texts[2].textContent = siteContent['main-content']['services-content'];
+texts[3].textContent = siteContent['main-content']['product-content'];
+texts[4].textContent = siteContent['main-content']['vision-content'];
+
+let midImg = document.querySelector('#middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
+let copy = document.querySelector('footer p');
+copy.textContent = siteContent['footer']['copyright'];
+
+let navGit = document.createElement("a");
+navGit.textContent = "Git";
+navGit.style.color = "green";
+let nav = document.querySelector('nav');
+
+
+let navlink = document.createElement("a");
+navlink.textContent = "Linked In";
+navlink.style.color = "green";
+
+nav.appendChild(navGit);
+nav.prepend(navlink);
+
+let hideShow = document.createElement("button");
+
+hideShow.textContent = "Collapse Mid-Img";
+hideShow.style.width = "50%";
+
+let hidden = false;
+hideShow.onclick = function(){
+  
+  if (hidden === false){
+    midImg.style.display = "none";
+    hidden = true;}
+
+  else if (hidden === true){
+    midImg.style.display = "block";
+    hidden = false;
+  }
+};
+
+let cta = document.querySelector('.cta-text');
+
+
+cta.appendChild(hideShow);
