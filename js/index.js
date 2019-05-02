@@ -103,8 +103,22 @@ nav.appendChild(navGit);
 nav.prepend(navlink);
 
 let hideShow = document.createElement("button");
-hideShow.textContent = "Collapse";
+
+hideShow.textContent = "Collapse Mid-Img";
 hideShow.style.width = "50%";
+
+let hidden = false;
+hideShow.onclick = function(){
+  
+  if (hidden === false){
+    midImg.style.display = "none";
+    hidden = true;}
+
+  else if (hidden === true){
+    midImg.style.display = "block";
+    hidden = false;
+  }
+};
 
 let cta = document.querySelector('.cta-text');
 
