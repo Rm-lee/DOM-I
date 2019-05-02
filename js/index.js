@@ -47,7 +47,7 @@ navl.forEach(element => {
   
    content = `nav-item-${navCounter}`;
    element.textContent = siteContent["nav"][content];
-   
+   element.style.color = 'green';
    navCounter = navCounter + 1;
 });
 
@@ -89,9 +89,16 @@ contactP[2].textContent = siteContent['contact']['email'];
 let copy = document.querySelector('footer p');
 copy.textContent = siteContent['footer']['copyright'];
 
-//let h4 = document.querySelectorAll("h4");
-//const titles = Object.values(siteContent.nav);
-//h4.forEach((e, i) => {
-//  e.textContent = titles[i];
-//});
-//
+let navGit = document.createElement("a");
+navGit.textContent = "Git";
+navGit.style.color = "green";
+let nav = document.querySelector('nav');
+
+
+let navlink = document.createElement("a");
+navlink.textContent = "Linked In";
+navlink.style.color = "green";
+
+nav.appendChild(navGit);
+nav.appendChild(navlink);
+
