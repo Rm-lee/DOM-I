@@ -100,5 +100,13 @@ navlink.textContent = "Linked In";
 navlink.style.color = "green";
 
 nav.appendChild(navGit);
-nav.appendChild(navlink);
+nav.prepend(navlink);
 
+let hideShow = document.createElement("button");
+hideShow.textContent = "Collapse";
+hideShow.style.width = "50%";
+
+let cta = document.querySelector('.cta-text');
+
+
+cta.appendChild(hideShow);
