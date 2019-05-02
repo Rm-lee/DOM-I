@@ -40,3 +40,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+navCounter = 1;
+let navl = document.querySelectorAll('nav a');
+navl.forEach(element => {
+  
+   content = `nav-item-${navCounter}`;
+   element.textContent = siteContent["nav"][content];
+   
+   navCounter = navCounter + 1;
+});
+
+let ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent['cta']['h1'];
+
+let ctaBtn = document.querySelector('.cta-text button');
+ctaBtn.textContent = siteContent['cta']['button'];
+
+let ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent['cta']['img-src'];
+
+let h4 = document.querySelectorAll(".main-content h4");
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+
+let texts = document.querySelectorAll('p');
+texts[0].textContent = siteContent['main-content']['features-content'];
+texts[1].textContent = siteContent['main-content']['about-content'];
+texts[2].textContent = siteContent['main-content']['services-content'];
+texts[3].textContent = siteContent['main-content']['product-content'];
+texts[4].textContent = siteContent['main-content']['vision-content'];
+
+let midImg = document.querySelector('#middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+
+
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
+
+//let h4 = document.querySelectorAll("h4");
+//const titles = Object.values(siteContent.nav);
+//h4.forEach((e, i) => {
+//  e.textContent = titles[i];
+//});
+//
